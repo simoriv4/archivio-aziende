@@ -28,8 +28,21 @@ public class App {
         Dipendente d8 = new Dipendente(05042005, 12032020, 40, "Maria", "Rossi", u7);
         Dipendente d9 = new Dipendente(05042005, 12032020, 40, "Lucia", "Verde", u2);
 
+        Archivio a = new Archivio();
+        // aggiungo i dipendenti alla lista
+        a.add(d1);
+        a.add(d2);
+        a.add(d3);
+        a.add(d4);
+        a.add(d5);
+        a.add(d6);
+        a.add(d7);
+        a.add(d8);
+        a.add(d9);
 
-        
+        // salvo sul file i nomi dei dipendenti
+        a.salvaSuFile("archivio.txt");
+
 
     }
 }

@@ -21,7 +21,7 @@ public class Dipendente {
      * @param cognome
      * @param uffioReparto
      */
-    Dipendente(int dataNascita, int dataAssunzione, int oreSettimanali, String nome, String cognome, Ufficio uffioReparto)
+    public Dipendente(int dataNascita, int dataAssunzione, int oreSettimanali, String nome, String cognome, Ufficio uffioReparto)
     {
         this.dataNascita = dataNascita;
         this.dataAssunzione = dataAssunzione;
