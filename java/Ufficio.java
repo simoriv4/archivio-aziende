@@ -18,4 +18,8 @@ public class Ufficio {
         this.nomeResponsabile = nomeResponsabile;
         this.siglaLocale = siglaLocale;
     }
+
+    public String formatForFile() {
+        return this.numeroPiano + "\\,"  + this.numeroPostazioni + "\\," + this.nomeResponsabile + "\\," + this.siglaLocale;
+    }
 }
