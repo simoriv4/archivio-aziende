@@ -1,3 +1,4 @@
+package java;
 public class Ufficio {
     int numeroPiano;
     int numeroPostazioni;

@@ -1,3 +1,4 @@
+package java;
 public class Dipendente {
     int dataNascita;
     int dataAssunzione;
