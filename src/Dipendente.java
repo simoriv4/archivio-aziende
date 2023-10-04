@@ -1,4 +1,4 @@
-package java;
+package src;
 
 import java.io.File;
 import java.io.FileReader;
@@ -21,7 +21,7 @@ public class Dipendente {
      * @param cognome
      * @param uffioReparto
      */
-    public Dipendente(int dataNascita, int dataAssunzione, int oreSettimanali, String nome, String cognome, Ufficio uffioReparto)
+    public Dipendente(int dataNascita, int dataAssunzione, int oreSettimanali, String nome, String cognome, Ufficio ufficioReparto)
     {
         this.dataNascita = dataNascita;
         this.dataAssunzione = dataAssunzione;
@@ -53,7 +53,7 @@ public class Dipendente {
 
     public String formatForFile()
     {
-        return this.dataNascita + "\\;" + this.dataAssunzione + "\\;" + this.oreSettimanali + "\\;" + this.nome + "\\;" + this.cognome + "\\;" + this.ufficioReparto.formatForFile() + ";";
+        return this.dataNascita + "\\;" + this.dataAssunzione + "\\;" + this.oreSettimanali + "\\;" + this.nome + "\\;" + this.cognome + "\\;" + this.ufficioReparto.formatForFile() + "\\\\;";
     }
 
 }

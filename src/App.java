@@ -1,4 +1,4 @@
-package java;
+package src;
 
 public class App {
     static final String RESPONSABILE_U1 = "Mario Rossi";
@@ -10,6 +10,12 @@ public class App {
     static final String RESPONSABILE_U7 = "Luca Rossi";  
 
     public static void main(String[] args) throws Exception {
+
+        Archivio a = new Archivio();
+
+        a.caricaDaFile("archivio.txt");
+        System.out.println(a.visualizza());
+
         Ufficio u1 = new Ufficio(0, 4, RESPONSABILE_U1, "L0");
         Ufficio u2 = new Ufficio(0, 3, RESPONSABILE_U2, "L1");
         Ufficio u3 = new Ufficio(0, 5, RESPONSABILE_U3, "L2");
@@ -28,7 +34,6 @@ public class App {
         Dipendente d8 = new Dipendente(05042005, 12032020, 40, "Maria", "Rossi", u7);
         Dipendente d9 = new Dipendente(05042005, 12032020, 40, "Lucia", "Verde", u2);
 
-        Archivio a = new Archivio();
         // aggiungo i dipendenti alla lista
         a.add(d1);
         a.add(d2);
