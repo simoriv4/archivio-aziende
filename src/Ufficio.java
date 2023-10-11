@@ -1,25 +1,38 @@
 package src;
 public class Ufficio {
-    int numeroPiano;
+    int ID;
+    int idResponsabile;
     int numeroPostazioni;
-    String nomeResponsabile;
-    String siglaLocale;
+    String codiceUfficio;
+    String nomeUfficio;
+    String piano;
 
     /**
      * costruttore con parametri disposti in ordine tipo di variabili
-     * @param numeroPiano
+     * @param iD
+     * @param idResponsabile
      * @param numeroPostazioni
-     * @param nomeResponsabile
-     * @param siglaLocale
+     * @param codiceUfficio
+     * @param nomeUfficio
      */
-    Ufficio(int numeroPiano, int numeroPostazioni, String nomeResponsabile, String siglaLocale) {
-        this.numeroPiano = numeroPiano;
+    public Ufficio(int iD, int idResponsabile, int numeroPostazioni, String codiceUfficio, String nomeUfficio, String piano) {
+        this.ID = iD;
+        this.idResponsabile = idResponsabile;
         this.numeroPostazioni = numeroPostazioni;
-        this.nomeResponsabile = nomeResponsabile;
-        this.siglaLocale = siglaLocale;
+        this.codiceUfficio = codiceUfficio;
+        this.nomeUfficio = nomeUfficio;
+        this.piano = piano;
     }
 
-    public String formatForFile() {
-        return this.numeroPiano + "\\,"  + this.numeroPostazioni + "\\," + this.nomeResponsabile + "\\," + this.siglaLocale;
+    public String visualizza() {
+        return this.ID + ";" + this.codiceUfficio + ";" + this.numeroPostazioni + ";" + this.idResponsabile + ";" + this.nomeUfficio + ";" + this.piano;
+    }
+     /**
+     * serializza in formato serialize php l'ufficio
+     * @return
+     */
+    public String serialize()
+    {
+        return "i:" + this.ID + ";s:" + this.codiceUfficio.length() + ":" + this.codiceUfficio + ";i:" + this.numeroPostazioni + ";i:" + this.idResponsabile + ";s:" + this.nomeUfficio.length() + ":"+ this.nomeUfficio + ";s:"+ this.piano.length() + ":" + this.piano + ";";
     }
 }
